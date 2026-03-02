@@ -128,6 +128,28 @@
   text-underline-offset: 0.22rem;
 }
 
+.idol-button-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(108px, 1fr));
+  gap: 0.55rem;
+  margin: 1rem 0 0.8rem;
+}
+
+.idol-button {
+  border: 1px solid #c9b992;
+  border-radius: 8px;
+  background: #f0e5c5;
+  color: #2f3240;
+  font-size: 0.84rem;
+  font-weight: 700;
+  padding: 0.45rem 0.35rem;
+  cursor: pointer;
+}
+
+.idol-button:hover {
+  background: #ead9ad;
+}
+
 .idol-popup {
   position: fixed;
   inset: 0;
