@@ -340,6 +340,27 @@
   background: #efe2bd;
 }
 
+.page--full-width {
+  max-width: calc(100vw - 2rem);
+}
+
+.page1-gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.7rem;
+  margin-bottom: 0.9rem;
+}
+
+.page1-gallery__image {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 10px;
+  border: 1px solid #d4c08d;
+  background: #f2e8c8;
+  padding: 0.25rem;
+}
+
 .page6-panel {
   border: 1px solid #d6c8a3;
   background: #fffaf0;
@@ -502,6 +523,10 @@
   .page {
     margin: 1.25rem 1rem;
     padding: 1.2rem;
+  }
+
+  .page--full-width {
+    max-width: calc(100vw - 2rem);
   }
 
   .hero,
