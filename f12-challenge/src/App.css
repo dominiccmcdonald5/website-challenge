@@ -283,6 +283,11 @@
   color: #2f3240;
 }
 
+.page10-idol-reveal {
+  margin-inline: auto;
+  text-align: center;
+}
+
 .quiz-idol-image {
   display: block;
   width: 170px;
