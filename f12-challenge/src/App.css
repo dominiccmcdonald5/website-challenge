@@ -293,6 +293,211 @@
   padding: 0.35rem;
 }
 
+.super-idol-showcase {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 0.85rem;
+  align-items: center;
+  border: 1px solid #d6c8a3;
+  background: #fffaf0;
+  border-radius: 12px;
+  padding: 0.85rem;
+  margin-bottom: 1rem;
+}
+
+.super-idol-showcase__image {
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid #d4c08d;
+  background: #f2e8c8;
+  padding: 0.25rem;
+}
+
+.super-idol-showcase__text {
+  margin: 0 !important;
+  font-weight: 700;
+  color: #2f3240 !important;
+}
+
+.hidden-idol-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 0.7rem;
+  margin-bottom: 0.8rem;
+}
+
+.hidden-idol-grid__item {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: contain;
+  border-radius: 6px;
+  border: 1px solid #d4c08d;
+  background: #f2e8c8;
+  padding: 0.3rem;
+}
+
+.hidden-idol-grid__item--valid {
+  background: #efe2bd;
+}
+
+.page6-panel {
+  border: 1px solid #d6c8a3;
+  background: #fffaf0;
+  border-radius: 12px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.page6-panel__display {
+  margin: 0 0 0.8rem !important;
+  width: fit-content;
+  min-width: 180px;
+  border: 1px solid #c9b992;
+  border-radius: 10px;
+  background: #f0e5c5;
+  color: #2f3240 !important;
+  font-size: 1.6rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  line-height: 1;
+  padding: 0.7rem 0.9rem;
+}
+
+.page6-keypad {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 0.55rem;
+  max-width: 420px;
+}
+
+.page6-keypad__button {
+  border: 1px solid #c9b992;
+  border-radius: 8px;
+  background: #f0e5c5;
+  color: #2f3240;
+  font-size: 1rem;
+  font-weight: 800;
+  padding: 0.6rem 0.4rem;
+  cursor: pointer;
+}
+
+.page6-keypad__button:hover {
+  background: #ead9ad;
+}
+
+.page6-panel__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  margin-top: 0.8rem;
+}
+
+.page6-story {
+  border: 1px solid #d6c8a3;
+  background: #fffaf0;
+  border-radius: 12px;
+  padding: 1rem;
+  margin-bottom: 0.85rem;
+}
+
+.page6-story p {
+  margin: 0 !important;
+  color: #4e4a40 !important;
+}
+
+.page6-result {
+  margin-bottom: 0.85rem !important;
+  font-weight: 700;
+  color: #3a435f !important;
+}
+
+.page8-code-card {
+  width: fit-content;
+  border: 1px solid #d6c8a3;
+  background: #fffaf0;
+  border-radius: 12px;
+  padding: 0.8rem 1rem;
+  margin: 0;
+}
+
+.page8-code-card__label {
+  margin: 0 0 0.3rem !important;
+  font-weight: 700;
+  color: #3a435f !important;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.78rem;
+}
+
+.page8-code-card__value {
+  margin: 0 !important;
+  font-size: clamp(1.7rem, 4vw, 2.2rem);
+  line-height: 1;
+  font-weight: 800;
+  color: #2f3240 !important;
+}
+
+.page8-scroll-field {
+  width: 100%;
+  min-height: 3600px;
+  position: relative;
+  margin-bottom: 0.9rem;
+}
+
+.page8-hover-zone {
+  position: absolute;
+  width: 130px;
+  height: 130px;
+  touch-action: manipulation;
+}
+
+.page8-hover-zone--idol {
+  top: 2320px;
+  left: 14%;
+}
+
+.page8-hover-zone--code {
+  top: 1120px;
+  left: 71%;
+}
+
+.page8-hover-zone .page8-hover-reveal__idol,
+.page8-hover-zone .page8-code-card {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.15s ease;
+}
+
+.page8-hover-reveal__idol {
+  display: block;
+  width: 180px;
+  max-width: 100%;
+  border-radius: 10px;
+  border: 1px solid #d4c08d;
+  background: #f2e8c8;
+  padding: 0.35rem;
+}
+
+.page8-hover-zone--idol .page8-hover-reveal__idol {
+  transform: translate(-22px, -24px);
+}
+
+.page8-hover-zone--code .page8-code-card {
+  transform: translate(-35px, -18px);
+}
+
+.page8-hover-zone:hover .page8-hover-reveal__idol,
+.page8-hover-zone:hover .page8-code-card {
+  opacity: 1;
+  visibility: visible;
+}
+
+.page8-hover-zone--revealed .page8-hover-reveal__idol,
+.page8-hover-zone--revealed .page8-code-card {
+  opacity: 1;
+  visibility: visible;
+}
+
 @media (max-width: 760px) {
   .page {
     margin: 1.25rem 1rem;
@@ -301,6 +506,10 @@
 
   .hero,
   .intro-card {
+    grid-template-columns: 1fr;
+  }
+
+  .super-idol-showcase {
     grid-template-columns: 1fr;
   }
 }
